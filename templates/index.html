@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Certificate</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: grid;
+            place-items: center;
+            min-height: 80vh;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            background: #fff;
+            padding: 2rem 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        h1 {
+            color: #00529b; /* UW-Milwaukee Blue */
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            font-size: 1rem;
+            color: #555;
+        }
+        input[type="text"] {
+            width: 90%;
+            padding: 0.75rem;
+            margin-top: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #ffc20e; /* UW-Milwaukee Gold */
+            color: #333;
+            font-weight: bold;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            margin-top: 1.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #e6b00d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI and Fun with Computers</h1>
+        <p>A hands-on workshop at UW-Milwaukee</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 1.5rem 0;">
+        
+        <form action="/generate" method="POST">
+            <label for="name" style="font-weight: bold;">Enter your full name to receive your certificate:</label>
+            <br>
+            <input type="text" id="name" name="name" placeholder="E.g., Bango Panther" required>
+            <br>
+            <button type="submit">Download Certificate</button>
+        </form>
+    </div>
+</body>
+</html>
